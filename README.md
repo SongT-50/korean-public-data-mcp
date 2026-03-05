@@ -101,7 +101,31 @@ claude mcp add korean-public-data -- python server.py
 }
 ```
 
-### 3. MCPize (설치 없이)
+### 3. 원격 접속 (설치 없이)
+
+Render에 배포된 서버를 바로 사용할 수 있습니다.
+
+```bash
+# Claude Code
+claude mcp add korean-public-data --transport sse https://korean-public-data-mcp.onrender.com/sse
+```
+
+```json
+// Claude Desktop
+{
+  "mcpServers": {
+    "korean-public-data": {
+      "transport": "sse",
+      "url": "https://korean-public-data-mcp.onrender.com/sse"
+    }
+  }
+}
+```
+
+> 무료 Render 인스턴스는 비활성 시 슬립됩니다. 첫 요청에 30~60초 걸릴 수 있습니다.
+> 원격 서버의 API 키는 서버에 설정되어 있습니다. 로컬 설치 시에만 본인의 키가 필요합니다.
+
+### 4. MCPize (설치 없이)
 
 [MCPize에서 바로 사용하기](https://mcpize.com/mcp/korean-public-data)
 
