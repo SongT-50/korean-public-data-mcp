@@ -15,6 +15,8 @@
   <img src="https://img.shields.io/badge/Claude_Code-supported-5B21B6" alt="Claude Code">
   <img src="https://img.shields.io/badge/Data-공공데이터포털-0064FF" alt="Data.go.kr">
   <img src="https://img.shields.io/badge/Price-Free-10b981" alt="Free">
+  <br>
+  <a href="https://render.com/deploy?repo=https://github.com/SongT-50/korean-public-data-mcp"><img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render"></a>
 </p>
 
 ---
