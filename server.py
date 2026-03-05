@@ -647,4 +647,4 @@ if __name__ == "__main__":
     else:
         mcp.settings.host = "0.0.0.0"
         mcp.settings.port = port
-        mcp.run(transport="streamable-http")
+        mcp.run(transport="sse")
