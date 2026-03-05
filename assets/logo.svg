@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#0f2847"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="120" rx="16" fill="url(#bg)"/>
+
+  <!-- Icon: Data/Korea symbol -->
+  <g transform="translate(24, 20)">
+    <!-- Database icon -->
+    <ellipse cx="40" cy="20" rx="28" ry="10" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+    <path d="M12 20 v40 c0 5.5 12.5 10 28 10 s28-4.5 28-10 v-40" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+    <ellipse cx="40" cy="40" rx="28" ry="10" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <ellipse cx="40" cy="60" rx="28" ry="10" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+    <!-- Korea flag element (taegeuk hint) -->
+    <circle cx="40" cy="40" r="8" fill="url(#accent)" opacity="0.6"/>
+  </g>
+
+  <!-- Text -->
+  <text x="110" y="48" font-family="Inter, -apple-system, sans-serif" font-size="22" font-weight="800" fill="white">Korean Public Data</text>
+  <text x="110" y="76" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="url(#accent)">MCP Server</text>
+  <text x="110" y="100" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#94a3b8">Weather · Real Estate · Air Quality · Economy</text>
+</svg>

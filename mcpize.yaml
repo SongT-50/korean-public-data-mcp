@@ -1,0 +1,46 @@
+name: korean-public-data
+description: |
+  Korean Public Data MCP Server.
+  Access Korea's essential public data through AI agents — no API key setup required.
+
+  5 real-time data sources:
+  - Business registration status check (National Tax Service)
+  - Apartment real estate transactions (Ministry of Land)
+  - Weather forecast for 25 cities (Korea Meteorological Administration)
+  - Air quality / fine dust levels (AirKorea)
+  - Economic statistics: interest rates, CPI, exchange rates, KOSPI (Bank of Korea)
+
+version: 1
+runtime: python
+entry: server.py
+
+environment:
+  - DATA_GO_KR_API_KEY
+  - ECOS_API_KEY
+
+tools:
+  - name: check_business_registration
+    description: Check business registration status by number (batch up to 100)
+  - name: get_real_estate_trades
+    description: Get apartment sale prices by district and month (Seoul 25 districts + major cities)
+  - name: get_weather_forecast
+    description: Get weather forecast for 25 Korean cities (up to 72 hours)
+  - name: get_air_quality
+    description: Get real-time air quality (PM10, PM2.5, ozone) for 15 locations
+  - name: get_economic_stats
+    description: Get Korean economic stats (interest rate, CPI, unemployment, GDP, exports, KRW/USD, KOSPI)
+  - name: list_supported_options
+    description: List all supported cities, districts, and economic indicators
+
+tags:
+  - korea
+  - public-data
+  - weather
+  - real-estate
+  - air-quality
+  - economics
+  - business
+  - korean
+
+pricing:
+  model: free
