@@ -607,6 +607,12 @@ async def get_economic_stats(
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
+@mcp.custom_route("/health", ["GET"])
+async def health(request):
+    from starlette.responses import JSONResponse
+    return JSONResponse({"status": "ok", "service": "korean-public-data-mcp", "tools": 6})
+
+
 @mcp.tool()
 async def list_supported_options() -> str:
     """이 MCP 서버에서 지원하는 도시, 지역, 경제지표 목록을 확인합니다.
@@ -651,4 +657,5 @@ if __name__ == "__main__":
         mcp.settings.transport_security = TransportSecuritySettings(
             enable_dns_rebinding_protection=False,
         )
+
         mcp.run(transport=transport)
