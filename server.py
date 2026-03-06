@@ -640,11 +640,11 @@ async def list_supported_options() -> str:
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "8080"))
-    transport = os.getenv("MCP_TRANSPORT", "sse")
+    transport = os.getenv("MCP_TRANSPORT", "stdio")
 
     if transport == "stdio":
         mcp.run()
     else:
         mcp.settings.host = "0.0.0.0"
         mcp.settings.port = port
-        mcp.run(transport="sse")
+        mcp.run(transport=transport)
