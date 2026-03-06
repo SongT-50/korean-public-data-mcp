@@ -645,6 +645,10 @@ if __name__ == "__main__":
     if transport == "stdio":
         mcp.run()
     else:
+        from mcp.server.transport_security import TransportSecuritySettings
         mcp.settings.host = "0.0.0.0"
         mcp.settings.port = port
+        mcp.settings.transport_security = TransportSecuritySettings(
+            enable_dns_rebinding_protection=False,
+        )
         mcp.run(transport=transport)
