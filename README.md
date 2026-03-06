@@ -107,7 +107,7 @@ Render에 배포된 서버를 바로 사용할 수 있습니다.
 
 ```bash
 # Claude Code
-claude mcp add korean-public-data --transport sse https://korean-public-data-mcp.onrender.com/sse
+claude mcp add korean-public-data --transport streamable-http https://korean-public-data-mcp.onrender.com/mcp
 ```
 
 ```json
@@ -115,8 +115,8 @@ claude mcp add korean-public-data --transport sse https://korean-public-data-mcp
 {
   "mcpServers": {
     "korean-public-data": {
-      "transport": "sse",
-      "url": "https://korean-public-data-mcp.onrender.com/sse"
+      "transport": "streamable-http",
+      "url": "https://korean-public-data-mcp.onrender.com/mcp"
     }
   }
 }
